@@ -30,7 +30,7 @@
     margin: 15px;
     padding: 15px;
     border-radius: 10px;
-    height: 20rem;
+    height: 30rem;
     font-weight: bold;
     width: 70rem;
 }
@@ -44,8 +44,7 @@
 
   .invalid-feedback-1, .invalid-feedback-2{
       display: none;
-      color: white;
-      
+      color: red;
      
   }
 
@@ -63,7 +62,7 @@
 
   .alert-msg{
     text-align: center;
-    /* color: red; */
+    color: white;
     font-weight: bolder;
   }
 
@@ -72,16 +71,4 @@
   }
 .bottom-display{
     width: 68rem; !important
-}
-
-.form-control {
-    width: 15rem;
-}
-
-.curr-form{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-    
 }
