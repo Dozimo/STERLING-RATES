@@ -16,18 +16,80 @@
     <div class="main">
         <div class="header container-fluid">
 
-            <nav class="navbar navbar-light bg-danger align-items-center shadow-sm p-3 mb-5  rounded">
+            <nav class="navbar navbar-light bg-light align-items-center shadow-sm p-3 mb-5  rounded">
                 <a class="navbar-brand  " href="#">
-                  <img src="logos/x-QbfIRV_400x400.jpg" width="90" height="90" class="d-inline-block align-top " alt="">
+                  <img src="logos/MicrosoftTeams-image (1).png" width="300" height="80" class="d-inline-block align-top " alt="">
                 </a>
                 <h1 class="display-1 ">STERLING RATES</h1>
             </nav>
             
         </div>
-        <div class="content">
-            <div class="container-fluid ">
+        <div class="content d-flex align-items-center justify-content-center flex-column">
+            <div class=" text-white right-bar border border-dark bg-primary  shadow p-3 mb-5  rounded ">
+                <header>
+                    <h1>TREASURY CURRENCY CONVERTER</h1>
+                  </header>
+                  <main>
+                    <form class="curr-form" id="amt-form">
+                      <div class="form-group">
+                        <label for="amt">Enter Amount</label>
+                        <input class="form-control" aria-describedby="emailHelp" type="text" id="amt" name="amt" placeholder="Enter amount to be converted here">
+                        <div class="invalid-feedback-1">
+                            Nothing to Calculate
+                          </div>
+                          <div class="invalid-feedback-2">
+                            Input must be numeric
+                          </div>  
+                    </div>
+                      
+                      <div id="fromform">
+                        <label for="frmcurr">Select currency to convert from</label>                                
+                        <select name="frmcurr" id="frmcurr" class="form-select" aria-label="Default select example" onchange="configureDropDownLists(this,document.getElementById('tocurr'))">
+                          <option value="" selected>Select currency</option>
+                          <option value="USD">USD</option>
+                          <option value="GBP">GBP</option>
+                          <option value="ZAR">ZAR</option>
+                          <option value="EUR">EUR</option>
+                          <option value="NGN">NGN</option>
+                          <option value="AUD">AUD</option>
+                          <option value="CAD">CAD</option>
+                          <option value="CNY">CNY</option>
+                          <option value="JPY">JPY</option>
+                          <option value="INR">INR</option>
+                          <option value="CHF">CHF</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label for="tocurr">Select currency to convert to</label>
+                        
+                        <select name="tocurr" id="tocurr" class="form-select" aria-label="Default select example">
+                          <!-- <option selected>Select currency</option>
+                          <option>USD</option>
+                          <option>GBP</option>
+                          <option>ZAR</option>
+                          <option>EUR</option>
+                          <option>NGN</option>
+                          <option>AUD</option>
+                          <option>CAD</option>
+                          <option>CNY</option>
+                          <option>JPY</option>
+                          <option>INR</option>
+                          <option>CHF</option> -->
+                        </select>
+                      </div>
+                      <div class="convert">
+                          <button id="submit" class="btn btn-dark">Convert</button>
+                        </div>
+                    </form>
+                    <div class="result-wrapper hide-me">
+                      <h3></h3>
+                      <p id="result">No result to display</p>
+                    </div>
+                  </main>
+            </div>
+            <div class="container-fluid bottom-display">
                 <div class="row  justify-content-space-between">
-                    <div class="col-7 border border-dark bg-light left-bar shadow p-3 mb-5  rounded">
+                    <div class=" border border-dark bg-primary text-white left-bar shadow p-3 mb-5  rounded">
                         <div class="container">
                             <div class="row">
                                 <div class="col ">
@@ -139,9 +201,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <i class="text-white" style="text-align: center;">NOTE: "SWAP RATE CASH' SHOULD BE APPLIED FOR CASH DEPOSIT ONLY				
+                            </i>
                         </div>
-                        <i class="text-danger">NOTE: "SWAP RATE CASH' SHOULD BE APPLIED FOR CASH DEPOSIT ONLY				
-                        </i>
+                        
                             <hr>
                             <div class="alert-msg">
                                 For Export Proceeds rate and USD sales above $50,000, please send  a mail to Treasurydealers@sterlingbankng.com or call 01-2702316 						
@@ -278,46 +341,7 @@
                         
                     </div>
                     
-                    <div class="col-4 border border-dark bg-info right-bar shadow p-3 mb-5  rounded">
-                        <header>
-                            <h1>Currency Converter</h1>
-                          </header>
-                          <main>
-                            <form class="curr-form" id="amt-form">
-                              <div class="form-group">
-                                <label for="amt">Enter NGN amount</label>
-                                <input class="form-control" aria-describedby="emailHelp" type="text" id="amt" name="amt" placeholder="Enter amount to be converted here">
-                              </div>
-                              <div class="invalid-feedback-1">
-                                Input field cannot be empty
-                              </div>
-                              <div class="invalid-feedback-2">
-                                Input must be numeric
-                              </div>
-                              <div>
-                                <label for="curr">Select currency to convert to</label>
-                                
-                                <select name="curr" id="curr" class="form-select" aria-label="Default select example">
-                                  <option selected>Select currency</option>
-                                  <option>USD</option>
-                                  <option>GBP</option>
-                                  <option>CAD</option>
-                                  <option>AUD</option>
-                                  <option>CFA</option>
-                                  <option>GHS</option>
-                                  <option>EUR</option>
-                                </select>
-                              </div>
-                              <div class="convert">
-                                  <button id="submit" class="btn btn-danger">Convert</button>
-                                </div>
-                            </form>
-                            <div class="result-wrapper hide-me">
-                              <h3>Result</h3>
-                              <p id="result">No result to display</p>
-                            </div>
-                          </main>
-                    </div>
+                    
                 </div>
             </div>
         </div>

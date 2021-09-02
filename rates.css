@@ -6,7 +6,7 @@
  }
 
  body {
-  
+    background-image: url(images/circuit-board-6580407_1920.jpg);
     font-family: 'Montserrat', sans-serif;
  }
 
@@ -17,6 +17,7 @@
 
 .navbar{
     height: 100%;
+    margin-top: 1rem;
 }
 
 .left-bar{
@@ -29,7 +30,9 @@
     margin: 15px;
     padding: 15px;
     border-radius: 10px;
-    height: 30rem;
+    height: 20rem;
+    font-weight: bold;
+    width: 70rem;
 }
 
 .convert{
@@ -41,8 +44,9 @@
 
   .invalid-feedback-1, .invalid-feedback-2{
       display: none;
-      color: red;
-      margin-bottom: 1rem;
+      color: white;
+      
+     
   }
 
   .form-group{
@@ -53,14 +57,31 @@
       font-size: xx-small;
   }
 
-  
+  #fromform{
+    margin-top: .1rem;
+  }
 
   .alert-msg{
     text-align: center;
-    color: red;
+    /* color: red; */
     font-weight: bolder;
   }
 
   .table{
       color: white;
   }
+.bottom-display{
+    width: 68rem; !important
+}
+
+.form-control {
+    width: 15rem;
+}
+
+.curr-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    
+}
