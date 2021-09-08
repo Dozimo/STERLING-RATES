@@ -74,10 +74,10 @@
 
 @media screen and (max-width: 800px) {
     .left-bar, .right.bar, .header {
-      max-width: 100vw; /* The width is 100%, when the viewport is 800px or smaller */
+      max-width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
     }
     .col-7, .col-4 {
-        max-width: 100vw; !important
+        max-width: 90vw; !important
         }
     .col-4{
         flex: 0 0 95%;
@@ -93,9 +93,9 @@
 
 @media screen and (max-width: 400px) {
     .left-bar, .right.bar, .header, .col-4 main {
-      max-width: 100vw; /* The width is 100%, when the viewport is 800px or smaller */
+      max-width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
     font-size: xx-small;
-    table-layout: fixed;
+    display: table;
     }
     .col-7, .col-4 {
     max-width: 90vw; !important
@@ -106,7 +106,13 @@
         font-size: 3rem;
     }
     .col-4{
-        flex: 0 0 90%;
+        flex: 0 0 100%;
+    }
+    .left-bar{
+        margin: 5px;
+    }
+    .right-bar{
+        margin: 5px;
     }
     .navbar-brand img{
         width: 50vw;
@@ -115,9 +121,9 @@
 
 @media screen and (max-width: 500px) {
     .left-bar, .right.bar, .header, .col-4 main {
-      max-width: 100vw; /* The width is 100%, when the viewport is 800px or smaller */
+      max-width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
     font-size: xx-small;
-    table-layout: fixed;
+    display: table;
     }
     .col-7, .col-4 {
     max-width: 90vw; !important
@@ -128,7 +134,7 @@
         font-size: 3rem;
     }
     .col-4{
-        flex: 0 0 90%;
+        flex: 0 0 100%;
     }
     .col-7{
         flex: 0 0 90%;
@@ -140,9 +146,9 @@
 
 @media screen and (max-width: 320px) {
     .left-bar, .right.bar, .header  {
-      max-width: 100vw; /* The width is 100%, when the viewport is 800px or smaller */
+      max-width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
     font-size: xx-small;
-    table-layout: fixed;
+    display: table;
     }
     .col-7, .col-4 {
     max-width: 90vw; !important
@@ -153,7 +159,11 @@
         font-size: 3rem;
     }
     .col-4{
-        flex: 0 0 90%;
+        flex: 0 0 100%;
+    }
+    .col-7{
+        flex: 0 0 100%;
+        width: 100vw;
     }
     .navbar-brand img{
         width: 50vw;
@@ -162,9 +172,9 @@
 
 @media screen and (max-width: 280px) {
     .left-bar, .right.bar, .header  {
-      max-width: 100vw; /* The width is 100%, when the viewport is 800px or smaller */
+      max-width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
     font-size: .2rem;
-    table-layout: fixed;
+    display: table;
     }
     .col-7, .col-4 {
     max-width: 90vw; !important
@@ -178,7 +188,7 @@
         font-size: 1rem  ;
     }
     .col-4{
-        flex: 0 0 90%;
+        flex: 0 0 100%;
     }
     .navbar-brand img{
         width: 50vw;
